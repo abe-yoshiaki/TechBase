@@ -1,7 +1,20 @@
 <div class="contents row">
   <% @tweets.each do |tweet| %>
-    <div class="display">
-      <p><%= tweet.content %></p>
-    <% end %>
+    <div class="roawe" >
+      <div class="col s12 m6 offset-m3">
+        <div class="card">
+          <div class="card-co">
+            <p><%= tweet.content %></p>
+          </div>
+          <div class="created_at-border">
+            <p class="created_at-text">作成日:<%= tweet.created_at.in_time_zone('Tokyo') %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div> 
+<div class="container">
   <%= paginate(@tweets) %>
-</div>  
+</div>
+    

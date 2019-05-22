@@ -5,36 +5,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-
     <title>TechBase</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-   
   </head>
 
   <body class="<%= "#{controller_name}-#{action_name}"%>">
-  
-  <nav>
-    <div class="nav-wrapper light-blue darken-4">
-      <div class="brand-logo">
-        <%= image_tag 'TechBase-logo-white.png' %>
+    <nav>
+      <div class="nav-wrapper light-blue darken-4">
+        <div class="brand-logo">
+          <%= image_tag 'TechBase-logo-white.png' %>
+        </div>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if user_signed_in? %>
+            <li><%= link_to "投稿する", new_tweet_path, :class => 'post' %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete%></li>
+          <% else %>
+            <li><%= link_to "ログイン", new_user_session_path, :class => 'post' %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, :class => 'post' %></li>
+          <% end %>
+        </ul>
       </div>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
- 
-        <% if user_signed_in? %>
-          <li><%= link_to "投稿する", new_tweet_path, :class => 'post' %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete%></li>
-        <% else %>
-          <li><%= link_to "ログイン", new_user_session_path, :class => 'post' %></li>
-          <li><%= link_to "新規登録", new_user_registration_path, :class => 'post' %></li>
-        <% end %>
-      </ul>
-    </div>
-  </nav>
+    </nav>
     <%= yield %>
   </body>
 </html>
