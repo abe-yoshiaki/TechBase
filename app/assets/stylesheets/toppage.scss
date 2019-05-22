@@ -1,0 +1,30 @@
+.brand-logo img {
+  height: 70px;
+}
+
+.tweets-home {
+  background: url(computer-hand.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  z-index: 0;
+}
+
+.tweets-home::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background: inherit;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.text-against_picture {
+  text-shadow: 0 0 10px #333;
+  color: #ffffff;
+}
