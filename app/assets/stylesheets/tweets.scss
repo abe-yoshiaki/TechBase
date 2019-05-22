@@ -1,5 +1,17 @@
-.text-against {
-  margin-left: 150px;
+.container {
+ margin-left: 25%;
 }
 
+.created_at-border {
+  border-top: 1px solid rgba(160,160,160,0.23);
+  color:#999999;  
+}
 
+.created_at-text {
+  line-height:36px;
+  margin:0 10px;
+}
+
+.test{
+  color:red;
+}
