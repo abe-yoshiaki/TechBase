@@ -12,11 +12,11 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(content: tweet_params[:text], user_id: current_user.id)
+    Tweet.create(title: tweet_params[:title], content: tweet_params[:text], user_id: current_user.id)
   end
 
   private
   def tweet_params
-    params.permit(:text)
+    params.permit(:title, :text)
   end
 end
