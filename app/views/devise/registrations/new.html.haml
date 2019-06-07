@@ -1,0 +1,20 @@
+.user-page
+  .user-page-box
+    %h4 TechBaseへようこそ!
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages
+      .row
+        .input-field.col.s12
+          = f.label :Eメール
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+      .row
+        .input-field.col.s12
+          = f.label :パスワード
+          = f.password_field :password, autocomplete: "new-password"
+      .row
+        .input-field.col.s12
+          = f.label :パスワード（確認用）
+          = f.password_field :password_confirmation, autocomplete: "new-password"
+      .center-align
+        %a.waves-effect.waves-light.btn.light-blue.darken-4
+          = f.submit "新規登録"
