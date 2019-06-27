@@ -70,3 +70,11 @@ gem 'pry-rails'
 gem 'kaminari'
 gem 'rails-i18n'
 gem 'haml-rails'
+
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
+end
