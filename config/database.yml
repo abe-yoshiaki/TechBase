@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: TechBase_production
-  username: TechBase
-  password: <%= ENV['TECHBASE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
