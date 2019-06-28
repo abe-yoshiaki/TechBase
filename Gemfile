@@ -58,12 +58,16 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :production do
+  gem 'unicorn', '5.4.1'
+  gem 'unicorn-rails'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'pry-rails'
-<<<<<<< Updated upstream
-=======
+
 gem 'kaminari'
 gem 'rails-i18n'
 gem 'haml-rails'
@@ -77,4 +81,3 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
 end
->>>>>>> Stashed changes
