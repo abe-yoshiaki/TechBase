@@ -1,0 +1,12 @@
+.home
+  = image_tag "computer-hand.jpg", class:"home--image"
+  .home__contents
+    %h1.home__contents--text Share together.
+    %p.home__contents--text TechBaseは、エンジニアのための技術情報共有サービスです。
+    %p.home__contents--text 自分のスキルを伸ばしたい時、技術的な壁に突き当たった時、
+    %p.home__contents--text 他のエンジニアとの知見を共有しましょう。
+    .home__contents--button 
+      = link_to new_user_registration_path, class:"center-align" do
+        .home__contents--button--link
+          %p.waves-effect.waves-light.btn.red.lighten-1 
+            今すぐ新規登録

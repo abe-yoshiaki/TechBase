@@ -1,0 +1,29 @@
+.brand-logo img {
+  height: 70px;
+}
+.home-contents {
+  margin-left: 150px;
+  &--text {
+    text-shadow: 0 0 10px #333;
+    color: #ffffff;
+  }
+}
+.home {
+  background-color: #f6f6f6;
+  position: relative;
+  &--image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    position:absolute;
+  }
+  &__contents {
+    width:100%;
+    position: absolute;
+    &--text {
+      text-shadow: 0 0 70px #333;
+      color: #ffffff;
+      padding-left: 60px;
+    }
+  }
+}
