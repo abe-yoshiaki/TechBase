@@ -1,0 +1,15 @@
+.user-page
+  .user-page-box
+    %h4 ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .row
+        .input-field.col.s12
+          = f.label :Eメール
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+      .row
+        .input-field.col.s12
+          = f.label :パスワード
+          = f.password_field :password, autocomplete: "current-password"
+      .center-align
+        %a.waves-effect.waves-light.btn.light-blue.darken-4
+          = f.submit "ログイン"
