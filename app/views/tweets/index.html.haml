@@ -1,0 +1,14 @@
+.contents.row
+  - if flash[:notice]
+    .post_done
+  - @tweets.each do |tweet|
+    .row
+      .col.s12.m6.offset-m3
+        .cards
+          .card-co
+            %p= tweet.content
+          .created_at-border
+            %p.created_at-text
+              作成日:#{tweet.created_at.in_time_zone('Tokyo')}
+.container
+  = paginate(@tweets)

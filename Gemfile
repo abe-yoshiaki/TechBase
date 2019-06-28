@@ -62,3 +62,19 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'pry-rails'
+<<<<<<< Updated upstream
+=======
+gem 'kaminari'
+gem 'rails-i18n'
+gem 'haml-rails'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
+end
+>>>>>>> Stashed changes
