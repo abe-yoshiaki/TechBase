@@ -15,7 +15,7 @@ class TweetsController < ApplicationController
     Tweet.create(title: tweet_params[:title], content: tweet_params[:text], user_id: current_user.id)
     if tweet_params[:title].present? && tweet_params[:text].present?
       redirect_to action: :index
-      flash[:notice] = "JSのメッセージ表示用"
+      flash[:post_done] = "JSのメッセージ表示用"
     end
   end
 
