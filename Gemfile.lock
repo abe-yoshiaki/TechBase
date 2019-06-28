@@ -296,7 +296,6 @@ DEPENDENCIES
   devise
   haml-rails
   jbuilder (~> 2.5)
-
   jquery-rails
   jquery-turbolinks
   kaminari
