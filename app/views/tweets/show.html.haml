@@ -1,0 +1,22 @@
+.post-new
+  = form_with url:"/tweets/#{@tweet.id}/comments",  method: :post do |f|
+    #title-border.row
+      .input-field.col.s11
+        = @tweet.title
+        %label#post_label.active タイトル
+    .row
+      .col.s12
+        .row
+          .input-field.col.s11
+            = @tweet.content
+            %label#post_label.active 本文
+    .post-new--comment
+      .h4＜コメント一覧＞
+      - if @comments
+        - @comments.each do |comment|
+          = comment.comments
+      %br
+      = f.text_area :comments, class: "post-comments", placeholder: "コメントする"
+      %br
+      %button#post-submit.waves-effect.waves-light.btn.light-blue.darken-4{name: "action", type: "submit"}
+        コメント送信
