@@ -2,14 +2,42 @@
   margin-left: 25%;
 }
 
+.card-co a {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.cards {
+  padding-top: 20px;
+}
+
 .created_at-border {
   border-top: 1px solid rgba(160,160,160,0.23);
-  color:#999999;  
+  color:#999999;
+}
+
+.card_option {
+  list-style: none;
+  display:flex;
+  a{
+    color: white;
+  }
+}
+
+#card_option--btn {
+  margin-right: 10px;
+  width:70px;
+  color:white;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .created_at-text {
   line-height:36px;
   margin:0 10px;
+  padding-left: 100px;
+  padding-top: 30px;
 }
 
 .form-control{
@@ -46,5 +74,3 @@
 #first_name2{
   padding-top: 20px;
 }
-
-
