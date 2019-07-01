@@ -14,10 +14,12 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(title: tweet_params[:title], content: tweet_params[:text], user_id: current_user.id)
     if tweet_params[:title].present? && tweet_params[:text].present?
+      Tweet.create(title: tweet_params[:title], content: tweet_params[:text], user_id: current_user.id)
       redirect_to action: :index
       flash[:post_done] = "JSのメッセージ表示用"
+    else
+      # JSで入力エラー表示
     end
   end
 
@@ -31,9 +33,13 @@ class TweetsController < ApplicationController
   end
 
   def update
-    tweet = Tweet.find(params[:id])
-    tweet.update(title: tweet_params[:title], content: tweet_params[:text]) if tweet.user_id == current_user.id
-    redirect_to action: :index
+    if tweet_params[:title].present? && tweet_params[:text].present?
+      tweet = Tweet.find(params[:id])
+      tweet.update(title: tweet_params[:title], content: tweet_params[:text]) if tweet.user_id == current_user.id
+      redirect_to action: :index
+    else
+      # JSで入力エラー表示
+    end
   end
 
   def destroy

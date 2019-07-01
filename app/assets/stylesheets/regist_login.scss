@@ -18,9 +18,27 @@ h4 {
 }
 
 .register-btn {
-  color: #fff;
+  background-color: #01579b;
+  border-style: none;
+  color: white;
 }
 
 .login-btn {
   color: #fff;
+}
+
+#register-margin {
+  margin-bottom: 10px;
+}
+
+.err_email_same {
+  color: red;
+  font-size: 14px;
+  padding: 10px 0px 10px 10px;
+}
+
+.err_email-login {
+  color: red;
+  font-size: 14px;
+  padding: 10px 0px 10px 10px;
 }

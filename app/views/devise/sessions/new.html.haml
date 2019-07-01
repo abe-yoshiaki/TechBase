@@ -2,14 +2,19 @@
   .user-page-box
     %h4 ログイン
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      - if flash[:need_new_account]
+        .err_email-login
+          = flash[:need_new_account]
       .row
         .input-field.col.s12
           = f.label :Eメール
-          = f.email_field :email, autofocus: true, autocomplete: "email"
+          = f.email_field :email, autofocus: true, autocomplete: "email",type: "text"
+          .err_email_login
       .row
         .input-field.col.s12
           = f.label :パスワード
           = f.password_field :password, autocomplete: "current-password"
+          .err_password_login
       .center-align
-        %a.waves-effect.waves-light.btn.light-blue.darken-4
-          = f.submit "ログイン", class: "login-btn"
+        %button.waves-effect.waves-light.btn.light-blue.darken-4{id:"login-btn",type: "submit"}
+          ログイン

@@ -53,7 +53,7 @@
 #post-textarea {
   padding-bottom: 0;
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   line-height: 40px;
   font-size: 15px;
 }
@@ -61,6 +61,12 @@
 #post-submit {
   width:15%;
   margin-left: 15px;
+  margin-top: 0px;
+}
+
+#comments-submit {
+  width:15%;
+  margin-top: 10px;
 }
 
 #title-border {
@@ -73,4 +79,8 @@
 
 #first_name2{
   padding-top: 20px;
+}
+
+.post_page {
+  padding-left: 10px;
 }
