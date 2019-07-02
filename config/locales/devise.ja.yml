@@ -72,3 +72,7 @@ ja:
         password: パスワード
         password_confirmation: パスワード確認
         email: メールアドレス
+ja:
+  time:
+    formats:
+      short: ! '%Y/%m/%d'

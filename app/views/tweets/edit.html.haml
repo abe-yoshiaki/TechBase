@@ -1,15 +1,16 @@
 .post-new
-  = form_tag('/tweets', method: :post) do
+  = form_tag("/tweets/#{@tweet.id}",class: "tweets-edit", method: :patch) do
     #title-border.row
       .input-field.col.s11
-        %input#post-title.validate{:name => "title", :placeholder => "タイトル", :type => "text"}/
-        %label#main-title タイトル
+        %input#first_name2{class: "validate", name: "title", placeholder: "見出しを決めよう", type: "text",value: "#{@tweet.title}" }
+        %label#post_label.active タイトル
     .row
-      %form.col.s12
+      .col.s12
         .row
           .input-field.col.s11
             %textarea#post-textarea.materialize-textarea{name: "text", placeholder: "アウトプットして技術情報を共有しよう。","data-length" => "140"}
+              = @tweet.content
             %label#post_label.active 本文
             .err_content_length
       %button#post-submit.waves-effect.waves-light.btn.light-blue.darken-4{name: "action", type: "submit"}
-        投稿する
+        更新する
