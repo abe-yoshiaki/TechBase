@@ -68,6 +68,7 @@ ja:
   activerecord:
     attributes:
       user:
+        nickname: ニックネーム
         name: 名前
         password: パスワード
         password_confirmation: パスワード確認

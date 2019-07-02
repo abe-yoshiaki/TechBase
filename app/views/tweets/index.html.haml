@@ -1,4 +1,6 @@
 .contents.row
+  - if flash[:post_done]
+    .post_done
   - @tweets.each do |tweet|
     .row
       .col.s12.m6.offset-m3

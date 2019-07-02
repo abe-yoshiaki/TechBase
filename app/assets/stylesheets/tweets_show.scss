@@ -1,0 +1,19 @@
+.post-new{
+  &--comment {
+    padding-left: 10px;
+  }
+}
+
+.post-comments {
+  height: 100px;
+  width: 500px;
+  border-radius: 3px;
+}
+
+#post-submit {
+  margin-left: 10px;
+}
+
+.tweet-comments {
+  padding-left: 10px;
+}

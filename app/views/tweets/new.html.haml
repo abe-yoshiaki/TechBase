@@ -1,11 +1,12 @@
 .post-new
-  = form_tag('/tweets', method: :post) do
+  = form_tag('/tweets', method: :post,class: "post_page") do
     #title-border.row
       .input-field.col.s11
-        %input#post-title.validate{:name => "title", :placeholder => "タイトル", :type => "text"}/
-        %label#main-title タイトル
+        %input#first_name2{class: "validate", name: "title", placeholder: "見出しを決めよう。", type: "text"}
+        %label#post_label.active タイトル
+        .err_title
     .row
-      %form.col.s12
+      .col.s12
         .row
           .input-field.col.s11
             %textarea#post-textarea.materialize-textarea{name: "text", placeholder: "アウトプットして技術情報を共有しよう。","data-length" => "140"}

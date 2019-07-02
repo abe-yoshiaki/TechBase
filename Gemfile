@@ -70,6 +70,8 @@ gem 'pry-rails'
 gem 'kaminari'
 gem 'rails-i18n'
 gem 'haml-rails'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'capistrano'
