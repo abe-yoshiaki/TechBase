@@ -4,8 +4,8 @@
   - @tweets.each do |tweet|
     .row
       .col.s12.m6.offset-m3
-        .card
-          #carding.card-content
+        #card-box.card
+          #content-box.card-content
             = link_to "/tweets/#{tweet.id}", method: :get do
               = tweet.title
             %br
