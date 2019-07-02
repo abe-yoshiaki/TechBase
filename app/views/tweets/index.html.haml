@@ -4,12 +4,21 @@
   - @tweets.each do |tweet|
     .row
       .col.s12.m6.offset-m3
-        .cards
-          .card-co
+        .card
+          #carding.card-content
             = link_to "/tweets/#{tweet.id}", method: :get do
               = tweet.title
-              %br
-            = tweet.content
+            %br
+            .tweet-content
+              = tweet.content
+            %br
+          .tweet-userinfo
+            .tweet-nickname
+              by
+              = tweet.user.nickname
+            .tweet-created_at
+              投稿日:
+              = l tweet.created_at, format: :short
           .created_at-border
           .card_option
             - if user_signed_in? && current_user.id == tweet.user_id
@@ -19,7 +28,5 @@
               %li
                 #card_option--btn.waves-effect.waves-light.btn.light-blue.darken-4
                   = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-              %p.created_at-text
-                作成日:#{tweet.created_at.in_time_zone('Tokyo')}
 .container
   = paginate(@tweets)

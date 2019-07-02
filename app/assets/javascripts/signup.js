@@ -19,7 +19,6 @@ $(document).on('turbolinks:load', function() {
     if($("#user_password").val().length < 6 || $("#user_password").val().length > 128 ){
       $(".err_passwordlength").text("パスワードは6文字以上128文字以下で入力してください");
       $(".err_passwordlength").css({'color':'red','font-size':'14px','margin-top':'8px'});
-      $(".err_passwordlength").css('border-color','red');
     }else{
       $(".err_passwordlength").text("");
     }
