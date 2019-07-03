@@ -1,7 +1,6 @@
 .home
-  = image_tag "computer-hand.jpg", class:"home--image"
   .home__contents
-    %h1.home__contents--text TechBase へようこそ.
+    %h2.home__contents--title TechBase へようこそ.
     %p.home__contents--text TechBaseは140文字以内で技術情報を共有するサービスです。
     %p.home__contents--text ちょっとした技術情報をインプット・アウトプットすることで
     %p.home__contents--text 他のエンジニアとの知見を共有し、一緒に成長していきましょう。
@@ -10,3 +9,4 @@
         .home__contents--button--link
           %p.waves-effect.waves-light.btn.red.lighten-1 
             今すぐ新規登録
+  = render partial: "tweets"

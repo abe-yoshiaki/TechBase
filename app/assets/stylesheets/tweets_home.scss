@@ -1,25 +1,20 @@
 .brand-logo img {
   height: 70px;
 }
-.home-contents {
-  margin-left: 150px;
-  &--text {
-    text-shadow: 0 0 10px #333;
-    color: #ffffff;
-  }
-}
+
 .home {
   background-color: #f6f6f6;
-  position: relative;
-  &--image {
+  &__contents {
+    background-image: image-url("computer-hand.jpg");
+    background-size: cover;
     width: 100%;
     height: 450px;
-    object-fit: cover;
-    position:absolute;
-  }
-  &__contents {
-    width:100%;
-    position: absolute;
+    &--title {
+      color: #ffffff;
+      padding-left: 40px;
+      padding-top: 40px;
+      margin-top: 0px;
+    }
     &--text {
       text-shadow: 0 0 70px #333;
       color: #ffffff;
@@ -27,3 +22,4 @@
     }
   }
 }
+

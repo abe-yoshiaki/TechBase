@@ -2,10 +2,10 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user).page(params[:page]).per(5).order("created_at DESC")
-    
   end
 
   def home
+    @tweets = Tweet.includes(:user).page(params[:page]).per(5).order("created_at DESC")
     if user_signed_in?
       redirect_to tweets_path
     end
