@@ -1,53 +1,27 @@
-# Awesome-name
+## アプリケーションの概要
 
-![Badge Status](https://ci-as-a-service)
+TwitterとQiitaを掛け合わせたようなサイトです。
+url: http://54.92.104.51/
 
-OverviewOverviewOverview
+## 機能一覧
 
-## Description
+- ユーザー新規登録機能(GEM 'devise')
+- ユーザーログイン機能(GEM 'devise')
+- 記事投稿機能
+- 記事一覧表示機能
+- 記事詳細表示機能
+- 記事編集・削除機能
+- 記事コメント投稿機能
 
-DescriptionDescriptionDescription
-DescriptionDescriptionDescription
-DescriptionDescriptionDescription
+## 使用技術
 
-***DEMO:***
-
-![Demo](https://image-url.gif)
-
-## Features
-
-- Awesome function
-- Awesome UI
-- ...
-
-For more information, see `awesome-tool --help`.
-
-## Requirement
-
-- Requirement
-- Requirement
-- Requirement
-
-## Usage
-
-1. Usage
-2. Usage
-3. Usage
-
-## Installation
-
-    $ git clone https://github.com/b4b4r07/awesome-tool
-
-## Anything Else
-
-AnythingAnythingAnything
-AnythingAnythingAnything
-AnythingAnythingAnything
-
-## Author
-
-[@b4b4r07](https://twitter.com/b4b4r07)
-
-## License
-
-[MIT](http://b4b4r07.mit-license.org)
+- Ruby 2.5.1
+- Rails 5.2.3
+- MySQL
+- Haml
+- SCSS
+- Materialize
+- JQuery
+- AWS
+  ・EC2
+  
