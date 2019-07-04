@@ -18,3 +18,9 @@
       .center-align
         %button.waves-effect.waves-light.btn.light-blue.darken-4{id:"login-btn",type: "submit"}
           ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = f.hidden_field :email, value: "test_account_for_techbase@gmail.com"
+      = f.hidden_field :password, value: "test_account_for_techbase"
+      .center-align
+        %button#test-user.waves-effect.waves-light.btn 
+          テストユーザとしてログイン
