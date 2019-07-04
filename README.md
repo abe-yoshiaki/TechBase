@@ -22,6 +22,6 @@ url: http://54.92.104.51/
 - SCSS
 - Materialize
 - JQuery
-- AWS
-  ・EC2
+- AWS  
+ ・EC2
   
