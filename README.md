@@ -1,24 +1,53 @@
-# README
+# Awesome-name
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Badge Status](https://ci-as-a-service)
 
-Things you may want to cover:
+OverviewOverviewOverview
 
-* Ruby version
+## Description
 
-* System dependencies
+DescriptionDescriptionDescription
+DescriptionDescriptionDescription
+DescriptionDescriptionDescription
 
-* Configuration
+***DEMO:***
 
-* Database creation
+![Demo](https://image-url.gif)
 
-* Database initialization
+## Features
 
-* How to run the test suite
+- Awesome function
+- Awesome UI
+- ...
 
-* Services (job queues, cache servers, search engines, etc.)
+For more information, see `awesome-tool --help`.
 
-* Deployment instructions
+## Requirement
 
-* ...
+- Requirement
+- Requirement
+- Requirement
+
+## Usage
+
+1. Usage
+2. Usage
+3. Usage
+
+## Installation
+
+    $ git clone https://github.com/b4b4r07/awesome-tool
+
+## Anything Else
+
+AnythingAnythingAnything
+AnythingAnythingAnything
+AnythingAnythingAnything
+
+## Author
+
+[@b4b4r07](https://twitter.com/b4b4r07)
+
+## License
+
+[MIT](http://b4b4r07.mit-license.org)
