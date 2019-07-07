@@ -28,7 +28,7 @@
               %li
                 #card_option--btn.waves-effect.waves-light.btn.light-blue.darken-4
                   = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-
+              %input{name: "current_user_id", type: "hidden", value: current_user.id, class: 'current_user_id' }
 #overray
   .cv-spinner
     %span.spinner
