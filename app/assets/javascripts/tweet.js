@@ -20,7 +20,7 @@ $(document).on('turbolinks:load', function() {
           $("#overray").fadeIn(500);
         }　
         $.each(data, function(i, tweet) {
-          var html2 = "";
+          var current_user_html = "";
           if (tweet.user_id == $('.current_user_id').val()){
             var current_user_html = `<li>
                                        <div class='waves-effect waves-light btn light-blue darken-4' id='card_option--btn'>
