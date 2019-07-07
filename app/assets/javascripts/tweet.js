@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', function() {
                               <br>
                             </div>
                             <div class='tweet-userinfo'>
-                              <div class='tweet-nickname'>${tweet.nickname}</div>
+                              <div class='tweet-nickname'>by ${tweet.nickname}</div>
                               <div class='tweet-created_at'>
                                 投稿日:
                                 ${tweet.created_at}
