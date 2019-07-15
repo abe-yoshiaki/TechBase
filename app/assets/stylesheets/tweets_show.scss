@@ -17,3 +17,24 @@
 .tweet-comments {
   padding-left: 10px;
 }
+
+#title-field-show {
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+#content-field-show {
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+#post_label {
+  font-size: 20px;
+}
+
+.user-comments {
+  margin: 10px 0px;
+  & a:hover{
+    text-decoration: underline;
+  }
+}
