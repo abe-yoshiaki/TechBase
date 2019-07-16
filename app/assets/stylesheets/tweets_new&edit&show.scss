@@ -1,0 +1,65 @@
+// 投稿・更新・コメントページ
+.post-new{
+  &--comment {
+    padding-left: 10px;
+  }
+}
+
+.tweet_page {
+  padding-left: 10px;
+}
+
+#post_label {
+  font-size: 20px;
+}
+
+#title-border {
+  margin-top: 20px;
+}
+
+// コメントページ
+.post-comments {
+  height: 100px;
+  width: 500px;
+  border-radius: 3px;
+}
+
+#title-field-show {
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+#content-field-show {
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+.user-comments {
+  margin: 10px 0px;
+  & a:hover{
+    text-decoration: underline;
+  }
+}
+
+#comments-submit {
+  width:15%;
+  margin-top: 10px;
+}
+
+// 投稿・更新ページ
+#first_name2{
+  padding-top: 20px;
+}
+
+#post-submit {
+  width: 15%;
+  margin: 0px 0px 0px 10px;
+}
+
+#post-textarea {
+  padding-bottom: 0;
+  margin-top: 10px 0px 5px;
+  line-height: 40px;
+  font-size: 15px;
+  height: 52px;
+}

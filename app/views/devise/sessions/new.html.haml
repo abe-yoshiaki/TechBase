@@ -1,9 +1,9 @@
 .user-page
-  .user-page-box
+  .user-page--box
     %h4 ログイン
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
       - if flash[:need_new_account]
-        .err_email-login
+        .err_email--need-new
           = flash[:need_new_account]
       .row
         .input-field.col.s12
@@ -18,7 +18,7 @@
       .center-align
         %button.waves-effect.waves-light.btn.light-blue.darken-4{id:"login-btn",type: "submit"}
           ログイン
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
       = f.hidden_field :email,id: "email", value: "test_account_for_techbase@gmail.com"
       = f.hidden_field :password,id: "password", value: "test_account_for_techbase"
       .center-align

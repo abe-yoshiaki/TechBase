@@ -1,11 +1,13 @@
 .contents.row
   - if flash[:post_done]
     .post_done
+  - if flash[:post_update]
+    .post_update
   - @tweets.each do |tweet|
     .row
       .col.s12.m6.offset-m3
         #card-box.card
-          #content-box.card-content
+          #card-box--content.card-content
             = link_to "/tweets/#{tweet.id}", method: :get do
               = tweet.title
             %br
@@ -15,7 +17,7 @@
           .tweet-userinfo
             .tweet-nickname
               by
-              = tweet.user.nickname
+              = link_to tweet.user.nickname, "/users/#{tweet.user_id}"
             .tweet-created_at
               投稿日:
               = l tweet.created_at, format: :short
@@ -23,10 +25,10 @@
           .card_option
             - if user_signed_in? && current_user.id == tweet.user_id
               %li
-                #card_option--btn.waves-effect.waves-light.btn.light-blue.darken-4
-                  = link_to '編集', "/tweets/#{tweet.id}/edit",method: :get
+                #card_option-btn.waves-effect.waves-light.btn.light-blue.darken-4
+                  = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
               %li
-                #card_option--btn.waves-effect.waves-light.btn.light-blue.darken-4
+                #card_option-btn.waves-effect.waves-light.btn.light-blue.darken-4
                   = link_to '削除', "/tweets/#{tweet.id}", method: :delete
               %input{name: "current_user_id", type: "hidden", value: current_user.id, class: 'current_user_id' }
 #overray

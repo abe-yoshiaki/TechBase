@@ -1,18 +1,63 @@
-.container {
-  margin-left: 25%;
+#page-top a {
+  background: #01579b;
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  padding: 30px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+
+#page-top a:hover {
+  text-decoration: none;
+  background: #01579b;
+}
+
+#overlay{   
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height:100%;
+  display: none;
+  background: rgba(0,0,0,0.6);
+}
+
+.cv-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+
+@keyframes sp-anime {
+  0% { 
+      transform: rotate(0deg); 
+  }
+  100% { 
+      transform: rotate(359deg); 
+  }
+}
+
+.is-hide{
+  display:none;
 }
 
 #card-box {
-  margin-top: 20px;
-  margin-bottom: 0px;
-}
-
-#content-box {
-  padding-bottom: 0px;
-}
-
-.tweet-content {
-  padding-top: 10px;
+  margin: 20px 0px 0px 0px;
+  &--content {
+    padding-bottom: 0px;
+  }
 }
 
 .card-content a{
@@ -25,12 +70,20 @@
   }
 }
 
+.tweet-content {
+  word-wrap: break-word;
+  padding-top: 10px;
+}
+
 .tweet-userinfo {
   color: #999;
   display: flex;
   font-size: 13px;
-  padding-left: 24px;
-  padding-bottom: 10px;
+  padding: 0px 0px 10px 24px;
+}
+
+.tweet-nickname a:hover {
+  text-decoration: underline;
 }
 
 .tweet-created_at {
@@ -50,65 +103,16 @@
   }
 }
 
-#card_option--btn {
+#card_option-btn {
   margin-right: 10px;
   width: 70px;
   color:white;
   margin: 10px 5px 10px 15px;
 }
 
-.created_at-text {
-  line-height:36px;
-  margin:0 10px;
-  padding-left: 100px;
-  padding-top: 30px;
-}
-
-.form-control{
-  margin:20px 20px;
-  padding:20px 20px;
-}
-
-#post-title {
-  margin-top: 20px;
-  font-size: 15px;
-}
-
-#post-textarea {
-  padding-bottom: 0;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  line-height: 40px;
-  font-size: 15px;
-}
-
-#post-submit {
-  width:15%;
-  margin-left: 15px;
-  margin-top: 0px;
-}
-
-#comments-submit {
-  width:15%;
-  margin-top: 10px;
-}
-
-#title-border {
-  margin-top: 20px;
-}
-
-#post_label {
-  font-size: 20px;
-}
-
-#first_name2{
-  padding-top: 20px;
-}
-
-.post_page {
-  padding-left: 10px;
-}
-
-.tweet-content {
-  word-wrap: break-word;
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 77%;
 }

@@ -25,7 +25,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       # JSでパスワード不一致エラー表示
     elsif user
       # 重複エラーはリロードで表示
-      flash[:same_email] = 'すでに登録済みのメールアドレスです。' 
+      flash[:same_email] = 'すでに登録済みのメールアドレスです。'
       redirect_to new_user_registration_path
     else
       super
