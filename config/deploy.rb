@@ -1,7 +1,9 @@
-# config valid for current version and patch releases of Capistrano
-lock "~> 3.11.0"
+# frozen_string_literal: true
 
-set :application, "TechBase"
+# config valid for current version and patch releases of Capistrano
+lock '~> 3.11.0'
+
+set :application, 'TechBase'
 set :repo_url, 'git@github.com:siann55/TechBase.git'
 
 # バージョンが変わっても共通で参照するディレクトリを指定

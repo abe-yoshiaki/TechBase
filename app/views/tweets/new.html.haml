@@ -1,16 +1,16 @@
 .post-new
-  = form_tag('/tweets', method: :post,class: "post_page") do
+  = form_with url: tweets_path, class: 'tweet_page', method: :post do |f|
     #title-border.row
       .input-field.col.s11
-        %input#first_name2{class: "validate", name: "title", placeholder: "見出しを決めよう。", type: "text"}
-        %label#post_label.active タイトル
+        = f.text_field :title, id: "first_name2", class: "validate", placeholder: "見出しを決めよう。", type: "text"
+        = f.label :タイトル, id: "post_label", class: "active"
         .err_title
     .row
       .col.s12
         .row
           .input-field.col.s11
-            %textarea#post-textarea.materialize-textarea{name: "text", placeholder: "アウトプットして技術情報を共有しよう。","data-length" => "140"}
-            %label#post_label.active 本文
+            = f.text_area :text, id: "post-textarea", class: "materialize-textarea", placeholder: "アウトプットして技術情報を共有しよう。","data-length" => "140"
+            = f.label :本文, id: "post_label", class: "active"
             .err_content_length
       %button#post-submit.waves-effect.waves-light.btn.light-blue.darken-4{name: "action", type: "submit"}
         投稿する

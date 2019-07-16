@@ -23,12 +23,12 @@ $(document).on('turbolinks:load', function() {
           var current_user_html = "";
           if (tweet.user_id == $('.current_user_id').val()){
             var current_user_html = `<li>
-                                       <div class='waves-effect waves-light btn light-blue darken-4' id='card_option--btn'>
+                                       <div class='waves-effect waves-light btn light-blue darken-4' id='card_option-btn'>
                                        <a data-method="get" href="/tweets/${tweet.user_id}/edit">編集</a>
                                        </div>
                                      </li>
                                      <li>
-                                       <div class='waves-effect waves-light btn light-blue darken-4' id='card_option--btn'>
+                                       <div class='waves-effect waves-light btn light-blue darken-4' id='card_option-btn'>
                                        <a rel="nofollow" data-method="delete" href="/tweets/${tweet.user_id}">削除</a>
                                        </div>
                                      </li>`
@@ -36,14 +36,18 @@ $(document).on('turbolinks:load', function() {
             var html = `<div class='row'>
             <div class='col s12 m6 offset-m3'>
               <div class='card' id='card-box'>
-                <div class='card-content' id='content-box'>
+                <div class='card-content' id='card-box--content'>
                   <a data-method="get" href="/tweets/${tweet.id}">${tweet.title}
                   </a><br>
                   <div class='tweet-content'>${tweet.content}</div>
                   <br>
                 </div>
                 <div class='tweet-userinfo'>
-                  <div class='tweet-nickname'>by ${tweet.nickname}</div>
+                  <div class='tweet-nickname'>
+                    by 
+                    <a data-method="get" href="/users/${tweet.user_id}">${tweet.nickname}
+                    </a>
+                  </div>
                   <div class='tweet-created_at'>
                     投稿日:
                     ${tweet.created_at}

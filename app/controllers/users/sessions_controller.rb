@@ -14,10 +14,10 @@ class Users::SessionsController < Devise::SessionsController
 
     if params[:user][:email].blank? || params[:user][:password].blank?
       # JSで入力チェックエラー表示
-    elsif user && user.valid_password?(params[:user][:password])
+    elsif user&.valid_password?(params[:user][:password])
       super
     else
-      flash[:need_new_account] = 'メールアドレスまたはパスワードが違います' 
+      flash[:need_new_account] = 'メールアドレスまたはパスワードが違います'
       redirect_to new_user_session_path
       # JSで同値チェックエラー表示
     end

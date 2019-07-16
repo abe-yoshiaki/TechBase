@@ -1,15 +1,15 @@
 .post-new
-  = form_with url:"/tweets/#{@tweet.id}/comments",class: "tweet-comments",  method: :post do |f|
+  = form_with url:"/tweets/#{@tweet.id}/comments", class: "tweet_page", method: :post do |f|
     #title-border.row
       #title-field-show.input-field.col.s11
         = @tweet.title
-        %label#post_label.active タイトル
+        = f.label :タイトル, id: "post_label", class: "active"
     .row
       .col.s12
         .row
           #content-field-show.input-field.col.s11
             = @tweet.content
-            %label#post_label.active 本文
+            = f.label :本文, id: "post_label", class: "active"
     .post-new--comment
       .h4＜コメント一覧＞
       - if @comments
@@ -18,9 +18,10 @@
             = link_to comment.user.nickname, "/users/#{comment.user_id}"
             ：
             = comment.comments
-      %br
-      = f.text_area :comments, class: "post-comments", placeholder: "コメントする"
-      %br
-      .err_comments
-      %button#comments-submit.waves-effect.waves-light.btn.light-blue.darken-4{name: "action", type: "submit"}
-        コメント送信
+      - if user_signed_in?
+        %br
+        = f.text_area :comments, class: "post-comments", placeholder: "コメントする"
+        %br
+        .err_comments
+        %button#comments-submit.waves-effect.waves-light.btn.light-blue.darken-4{name: "action", type: "submit"}
+          コメント送信
